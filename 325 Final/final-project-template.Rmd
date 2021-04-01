@@ -1,0 +1,83 @@
+---
+title: "Title of Your Project"
+author: "Group Number and Member's Names"
+output: 
+  word_document:
+    reference_docx: final-project-style.docx
+---
+
+> All instructions shown below start with the `greater than` sign. The instructions **MUST** not appear in the files (.Rmd and .docx) that you will submit via Blackboard. Make sure you remove all instructions (including this one) after you have completed your project.
+
+> **IMPORTANT**: If you have used data associated with a publication, **DO NOT** copy text from the source publication when writing this report. Your text will be cross-checked with original publication. **Plagiarism in any form will result in an automatic grade of ZERO.**
+
+> Use the chunk below to set global options for your document's chunks
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(include = FALSE)
+```
+
+> Use the chunk below to load the packages you will need and to read-in and process the data you will use.
+
+```{r libraries-data, include = FALSE}
+
+```
+
+# Introduction
+
+## Ecological Background
+
+> Maximum of 75 words (approximately 2-3 sentences).  
+
+> This sub-section must include a few brief statements about the general ecological context or problem that led to the formulation of your project objective(s). This sub-section is not supposed to be a comprehensive Introduction (note the word limit) but will enable you to succintly demonstrate how to set the stage for the statement of your objectives.
+
+## Objectives
+
+> Maximum of 75 words (approximately 2-3 sentences).  
+
+> This sub-section must include your project objective(s). If you wish, you can state questions or hypotheses instead. If stating hypotheses, state **ecological hypotheses**, not **statistical hypotheses**.
+
+# Methods
+
+## Data Source 
+
+> Maximum of 200 words (approximately 5-6 sentences)
+
+> This sub-section must include a description of how the data was collected (e.g. sampling/experimental design, sampling procedures, variables measured, and any other information you find relevant) and indicate from where you obtained the data.
+
+## Data Processing and Analysis
+
+> Maximum of 400 words (approximately 10-12 sentences)
+
+> This sub-section must include a description of all data processing steps you took to prepare the data for analysis. The description should be a high level one (e.g. "numeric variables were standardized" rather than describing the process of variable standardization). 
+
+> The model used to analyze the data must be described in detail and using mathematical notation (use Latex equation editors available on the web to help you write the model). The example below shows how to describe a **simple linear regression model** (your specific model may require different notation) for juvenile sockeye salmon length as a function of rearing temperature and explain the meaning of terms (if you are using Bayesian inference, you must also describe the priors assumed):
+ 
+> $$y_{i} \sim Normal\left(\mu_{i}, \sigma\right)$$
+
+> $$\mu_{i} = \beta_{0} + \beta_{t}x_{t, i}$$
+
+> where $y_{i}$ is the length of individual $i$; $beta_{0}$ is the model intercept; $\beta_{t}$ is the slope for the effect of rearing temperature; $x_{t, i}$ is the temperature individual $i$ was reared; $\sigma$ is the residual standard deviation.
+
+>End the section with a description of how model assumptions were checked, how model selection was conducted, and provide any other information you think relevant for the reader to understand how you processed the model output. Also mention the use of R for the analysis and list the R packages and versions used.
+
+> Include at the end of this section one or more code chunks with commands to fit the model to the data and conduct checks of model assumptions. The codes and their outputs must **NOT** appear in the rendered .docx file.
+
+# Results
+
+> Maximum of 400 words (approximately 10-12 sentences).
+
+> This sub-section must include a basic summary of the data and a detailed description of outputs of your analysis (including model selection, direction and strength of effects supported by the data). Present and refer to tables and figures to support your statements. 
+
+> Throughout this section, include code chunks with commands to create tables and figures (make sure to add informative captions). The codes  must **NOT** appear in the rendered .docx file but the tables and figures **MUST** be included in the rendered .docx file.
+
+> Results presented inline with text (e.g. means, statistics) must be presented using inline R code. For example, assuming the variable `y` created in the R chunk below (delete it from your final report) contains all juvenile sockeye salmon measurements in a study, I could present the mean and standard deviation of the measurements inline with text using:
+
+```{r}
+y <- rnorm(100, 4, 1)
+```
+
+> Juveniles sockeye salmon lengths were on average $\pm$ (1SD) `r round(mean(y), 1)` $\pm$ `r round(sd(y), 1)` cm.
+
+# References
+
+> Include here a list of all references cited. Refer to the Final Proect assignment on Blackboard for the format of citations.
